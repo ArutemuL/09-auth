@@ -1,0 +1,25 @@
+.menuList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.menuItem {
+    padding: 0 8px;
+    border: 2px solid red;
+}
+
+/* .menuLink {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+} */
+
+/* .menuLink:hover {} */

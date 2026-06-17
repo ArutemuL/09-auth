@@ -1,0 +1,32 @@
+.input {
+  flex: 1;
+  max-width: 240px;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  background-color: var(--input-background);
+  color: var(--color);
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  text-shadow: 0 0 1px currentColor;
+}
+
+.input::placeholder {
+  color: var(--placeholder-color);
+  transition: color 0.1s ease;
+}
+
+.input:focus {
+  border-color: #0d6efd;
+  box-shadow:
+    0 0 10px rgba(13, 109, 253, 0.647),
+    inset 0 0 10px rgba(13, 109, 253, 0.2),
+    0 0 10px rgba(13, 0, 255, 0.3);
+  text-shadow: 0 0 1px currentColor;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}

@@ -1,0 +1,14 @@
+.menuList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.menuItem {
+  padding: 0 8px;
+  margin: 0 8px;
+
+}

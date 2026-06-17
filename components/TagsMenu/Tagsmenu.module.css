@@ -1,0 +1,109 @@
+.menuContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.menuButton {
+    padding: 6px 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    transition: background-color 0.2s ease;
+}
+
+.menuButton::before {
+    content: '';
+    background: var(--glow-gradient);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 4px;
+}
+
+.menuButton:active {
+    background-color: #0b5ed7;
+}
+
+.menuButton:active::after {
+    background: transparent;
+}
+
+.menuButton:hover::before {
+    opacity: 1;
+}
+
+.menuButton::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0d6efd;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+}
+
+.menuButton:hover {
+    background-color: #0b5ed7;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+.menuList {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background-color: #0d6efd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 6px 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+.menuItem {
+    margin: 0;
+}
+
+.menuLink {
+    display: block;
+    padding: 8px 16px;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.menuLink:hover {
+    background-color: #65aff4;
+
+}

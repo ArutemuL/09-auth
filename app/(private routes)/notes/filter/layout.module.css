@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+.sidebar {
+  width: 1000px;
+  background-color: #646ae18c;
+  color: white;
+  padding: 16px;
+
+  border-radius: 12px;
+  margin: 22px auto 22px auto;
+
+  -webkit-box-shadow: 0 0 20px #a90dfda5, inset 0px 0px 0.9em 10px #0d00ff4d,
+    0px 0px 0.8em 20px #a90dfda5, inset 0 0 10px #0d6dfd33;
+  -moz-box-shadow: 0 0 10px #a90dfda5, inset 0px 0px 0.7em 10px #0d00ff4d,
+    0px 0px 0.9em 0px #a90dfda5, inset 0 0 10px #0d6dfd33;
+  box-shadow: 0 0 10px #a90dfda5, inset 0px 0px 0.9em 0px #0d00ff4d,
+    0px 0px 0.7em 0px #0d00ff4d, inset 0 0 10px #0d6dfd33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notesWrapper {
+  width: 100%;
+}
