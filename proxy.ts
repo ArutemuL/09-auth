@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { cookies } from "next/headers";
-import { api } from "./app/api/api";
+import { checkServerSession } from "./lib/api/serverApi";
 import { parse } from "cookie";
 
 const privateRoutes = ["/profile", "/notes"];
@@ -29,11 +29,7 @@ export async function proxy(request: NextRequest) {
   // Access token missing but refresh token present -> try to refresh session
   if (!accessToken && refreshToken) {
     try {
-      const apiRes = await api.get("auth/session", {
-        headers: {
-          Cookie: cookieStore.toString(),
-        },
-      });
+      const apiRes = await checkServerSession();
 
       const setCookie = apiRes.headers["set-cookie"];
       const response = isAuthRoute
